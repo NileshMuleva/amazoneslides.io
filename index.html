@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazone Slides</title>
+    <script src="data.js" defer></script>
+    <style>
+      .slides {
+        display: flex;
+        position: absolute;
+      }
+      .box {
+        border: solid rebeccapurple 2px;
+        background-color: rgb(43, 61, 79);
+        color: white;
+        width: 1000px;
+        height: 400px;
+        margin: 10px;
+        text-align: center;
+        position: relative;
+        left: 10%;
+        top: 3%;
+      }
+
+      .btns {
+        margin-top: 500px;
+        margin-left: 35%;
+      }
+
+      ._btns {
+        background-color: cornflowerblue;
+        color: white;
+        border-radius: 7px;
+        margin: 3rem;
+        width: 4rem;
+        height: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>amazone trending slides</h2>
+    <div class="slides">
+      <div class="box">
+        <h1 class="heading" data-testid="title">Slide-1</h1>
+        <p data-testid="text">This is from slide-1</p>
+      </div>
+      <!-- <div class="box">
+            <h1 data-testid="title">Slide-2</h1>
+            <p data-testid="text">This is from slide-2</p>
+        </div>
+        <div class="box">
+            <h1 data-testid="title">Slide-3</h1>
+            <p data-testid="text">This is from slide-3</p>
+        </div>
+        <div class="box">
+            <h1 data-testid="title">Slide-4</h1>
+            <p data-testid="text">This is from slide-4</p>
+        </div> -->
+    </div>
+    <div class="btns">
+      <button class="_btns" id="btn1" data-testid="button-prev"><<</button>
+      <button class="_btns" id="btn2" data-testid="button-restart">
+        Restart
+      </button>
+      <button class="_btns" id="btn3" data-testid="button-next">>></button>
+    </div>
+
+    <script>
+      const H1 = document.querySelector("h1");
+      const p = document.querySelector("p");
+      const prev = document.querySelector("#btn1");
+      const restart = document.querySelector("#btn2");
+      const next = document.querySelector("#btn3");
+
+      const h1 = (H1.textContent = "Slide-1");
+      const p1 = (p.textContent = "This is from slide-1");
+
+      const h2 = (H1.textContent = "Slide-2");
+      const p2 = (p.textContent = "This is from slide-2");
+
+      const h3 = (H1.textContent = "Slide-3");
+      const p3 = (p.textContent = "This is from slide-3");
+
+      const h4 = (H1.textContent = "Slide-4");
+      const p4 = (p.textContent = "This is from slide-4");
+      console.log(h1, p1);
+
+      const s1 = [h1, p1];
+      const s2 = [h2, p2];
+      const s3 = [h3, p3];
+      const s4 = [h4, p4];
+
+      const s = [s1, s2, s3, s4];
+      console.log(s1);
+      
+      console.log(H1.textContent = s1.h1)
+      
+
+
+      for (let i = 0; i < s.length; i++) {
+        if (i <= 3) {
+          
+        }
+      }
+      let j=0;
+      while(j <= s.length) {
+        next.addEventListener("click", () => {
+            H1.textContent = s1.h1;
+            p.textContent = "This is from slide-2";
+          });
+      }
+
+      restart.addEventListener("click", () => {
+        H1.textContent = "Slide-1";
+        p.textContent = "This is from slide-1";
+      });
+    </script>
+  </body>
+</html>
